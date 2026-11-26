@@ -5,6 +5,9 @@ export const site = {
   url: "https://dotcloudshop.com",
   tagline: "No KYC · Global VCC · Instant Delivery",
   title: "Buy VCC With Crypto | No KYC | Global VCC | Instant Delivery",
+  // false = ask Google & other search engines NOT to index any page (site still under construction).
+  // When you're ready to launch, set this to true AND set ALLOW_INDEXING = true in next.config.mjs.
+  indexing: false,
   description:
     "No KYC virtual cards and premium cloud accounts — paid with crypto, delivered in minutes.",
   contact: {

@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   title: { default: site.title, template: `%s | ${site.name}` },
   description: site.description,
   openGraph: { title: site.title, description: site.description, url: site.url, siteName: site.name, type: "website" },
+  // Site-wide noindex while site.indexing is false (see src/lib/site.ts)
+  ...(site.indexing ? {} : { robots: { index: false, follow: false, googleBot: { index: false, follow: false } } }),
 };
 
 export const viewport: Viewport = { themeColor: "#0a0a0c" };
